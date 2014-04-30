@@ -856,63 +856,67 @@
 				throw(message="Workbook does not exist at #arguments.filepath#");
 			}
 
-			// Opening in Office 2003 format, if that fails try opening in OOXML Office 2007+ format
+			// Place WorkBook operations into try/catch statement so FileInputStream will always be closed
 			try {
-				LOCAL.FileInputStream = CreateObject( "java", "java.io.FileInputStream" ).Init( ARGUMENTS.FilePath );
-				LOCAL.WorkBook = CreateObject("java","org.apache.poi.hssf.usermodel.HSSFWorkbook").Init(LOCAL.FileInputStream);
-			} catch(org.apache.poi.poifs.filesystem.OfficeXmlFileException cfcatch) {
-				LOCAL.FileInputStream = CreateObject( "java", "java.io.FileInputStream" ).Init( ARGUMENTS.FilePath );
-				LOCAL.WorkBook = CreateObject("java","org.apache.poi.xssf.usermodel.XSSFWorkbook").Init(LOCAL.FileInputStream);
-			}
-					
-					
-			// Check to see if we are returning an array of sheets OR just 
-			// a given sheet.
-			if (ARGUMENTS.SheetIndex GTE 0){
-			
-				// Read the sheet data for a single sheet.
-				LOCAL.Sheets = ReadExcelSheet(
-					LOCAL.WorkBook,
-					ARGUMENTS.SheetIndex,
-					ARGUMENTS.HasHeaderRow
-					);
-			
-			} else {
-			
-				// No specific sheet was requested. We are going to return an array
-				// of sheets within the Excel document.
-				
-				// Create an array to return.
-				LOCAL.Sheets = ArrayNew( 1 );
-				
-				// Loop over the sheets in the documnet.
-				for (
-					LOCAL.SheetIndex = 0 ;
-					LOCAL.SheetIndex LT LOCAL.WorkBook.GetNumberOfSheets() ;
-					LOCAL.SheetIndex = (LOCAL.SheetIndex + 1)
-					){
-					
-					// Add the sheet information.
-					ArrayAppend(
-						LOCAL.Sheets,
-						ReadExcelSheet(
-							LOCAL.WorkBook,
-							LOCAL.SheetIndex,
-							ARGUMENTS.HasHeaderRow
-							)
-						);
-					
+
+				// Opening in Office 2003 format, if that fails try opening in OOXML Office 2007+ format
+				if (GetFileFormat(ARGUMENTS.FilePath) IS "2007") {
+					LOCAL.FileInputStream = CreateObject( "java", "java.io.FileInputStream" ).Init( ARGUMENTS.FilePath );
+					LOCAL.WorkBook = CreateObject("java","org.apache.poi.xssf.usermodel.XSSFWorkbook").Init(LOCAL.FileInputStream);
+				} else
+				if (GetFileFormat(ARGUMENTS.FilePath) IS "2003") {
+					LOCAL.FileInputStream = CreateObject( "java", "java.io.FileInputStream" ).Init( ARGUMENTS.FilePath );
+					LOCAL.WorkBook = CreateObject("java","org.apache.poi.hssf.usermodel.HSSFWorkbook").Init(LOCAL.FileInputStream);
 				}
-				
-				
-				
+
+
+				// Check to see if we are returning an array of sheets OR just
+				// a given sheet.
+				if (ARGUMENTS.SheetIndex GTE 0){
+
+					// Read the sheet data for a single sheet.
+					LOCAL.Sheets = ReadExcelSheet(
+						LOCAL.WorkBook,
+						ARGUMENTS.SheetIndex,
+						ARGUMENTS.HasHeaderRow
+						);
+
+				} else {
+
+					// No specific sheet was requested. We are going to return an array
+					// of sheets within the Excel document.
+
+					// Create an array to return.
+					LOCAL.Sheets = ArrayNew( 1 );
+
+					// Loop over the sheets in the documnet.
+					for (
+						LOCAL.SheetIndex = 0 ;
+						LOCAL.SheetIndex LT LOCAL.WorkBook.GetNumberOfSheets() ;
+						LOCAL.SheetIndex = (LOCAL.SheetIndex + 1)
+						){
+
+						// Add the sheet information.
+						ArrayAppend(
+							LOCAL.Sheets,
+							ReadExcelSheet(
+								LOCAL.WorkBook,
+								LOCAL.SheetIndex,
+								ARGUMENTS.HasHeaderRow
+								)
+							);
+
+					}
+
+				}
+			} finally {
+
+				// Now that we have crated the Excel file system,
+				// and read in the sheet data, we can close the
+				// input file stream so that it is not locked.
+				LOCAL.FileInputStream.Close();
+
 			}
-			
-			
-			// Now that we have crated the Excel file system, 
-			// and read in the sheet data, we can close the 
-			// input file stream so that it is not locked.
-			LOCAL.FileInputStream.Close();
 						
 			// Return the array of sheets.
 			return( LOCAL.Sheets );
@@ -1352,11 +1356,8 @@
 			var LOCAL = StructNew();
 
 			// Set the Office Format
-			if (arguments.OfficeFormat IS "" and right(arguments.FilePath, 4) eq 'xlsx') {
-				arguments.OfficeFormat = "2007";
-			} else
-			if (arguments.OfficeFormat IS "" and right(arguments.FilePath, 3) eq 'xls') {
-				arguments.OfficeFormat = "2003";
+			if (arguments.OfficeFormat IS "") {
+				arguments.OfficeFormat = GetFileFormat();
 			}
 
 			if (arguments.OfficeFormat IS "2007") {
@@ -1913,6 +1914,23 @@
 			return;
 			
 		</cfscript>	
+	</cffunction>
+
+	<cffunction name="GetFileFormat" access="private" output="false" returntype="string">
+		<cfargument name="FilePath" type="string" required="true"/>
+		<cfscript>
+			LOCAL.OfficeFormat = "";
+
+			if (right(arguments.FilePath, 4) eq 'xlsx') {
+				LOCAL.OfficeFormat = "2007";
+			} else
+			if (right(arguments.FilePath, 3) eq 'xls') {
+				LOCAL.OfficeFormat = "2003";
+			}
+
+			return LOCAL.OfficeFormat;
+
+		</cfscript>
 	</cffunction>
 	
 	<cffunction name="Debug">
