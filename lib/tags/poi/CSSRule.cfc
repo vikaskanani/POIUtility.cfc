@@ -372,7 +372,7 @@
 		access="public"
 		returntype="any"
 		output="false"
-		hint="Applies the current CSS property map to the given HSSFCellStyle object.">
+		hint="Applies the current CSS property map to the given XSSFCellStyle object.">
 		
 		<!--- Define arguments. --->
 		<cfargument 
@@ -393,13 +393,14 @@
 			name="CellStyle"
 			type="any"
 			required="true"
-			hint="The HSSFCellStyle instance to which we are applying the CSS property rules."
+			hint="The XSSFCellStyle instance to which we are applying the CSS property rules."
 			/>
 		
 		<!--- Define the local scope. --->
 		<cfset var LOCAL = {} />
 		
-		
+		<cfset LOCAL.colorEnum = CreateObject("java", "org.apache.poi.ss.usermodel.IndexedColors") />
+
 		<!--- Create a local copy of the full CSS definition. --->
 		<cfset LOCAL.PropertyMap = StructCopy( VARIABLES.CSS ) />
 		
@@ -425,14 +426,16 @@
 			
 			<!--- 
 				Set the foreground color using the background color. We will need 
-				to create an instance of the HSSFColor inner class to get the index 
+				to use IndexedColors to get the index 
 				value of the color.
 			--->
 			<cfset ARGUMENTS.CellStyle.SetFillForegroundColor(
-				CreateObject( 
-					"java",
-					"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'background-color' ] )#"
-					).GetIndex()
+				LOCAL.colorEnum.valueOf(
+					JavaCast(
+						"String",
+						"#UCase( LOCAL.PropertyMap[ 'background-color' ] )#"
+						)
+					).getIndex()
 				) />
 				
 				
@@ -540,18 +543,22 @@
 					)>
 					
 					<!--- Get the border color. --->
-					<cfset LOCAL.BorderColor = CreateObject( 
-						"java",
-						"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'border-#LOCAL.BorderSide#-color' ] )#"
-						).GetIndex() />
+					<cfset LOCAL.BorderColor = LOCAL.colorEnum.valueOf(
+						JavaCast(
+							"String",
+							"#UCase( LOCAL.PropertyMap[ 'border-#LOCAL.BorderSide#-color' ] )#"
+							)
+						).getIndex() />
 				
 				<cfelse>
 					
 					<!--- Get the default border color (black). --->
-					<cfset LOCAL.BorderColor = CreateObject( 
-						"java",
-						"org.apache.poi.hssf.util.HSSFColor$BLACK"
-						).GetIndex() />
+					<cfset LOCAL.BorderColor = LOCAL.colorEnum.valueOf(
+						JavaCast(
+							"String",
+							"BLACK"
+							)
+						).getIndex() />
 						
 				</cfif>
 			
@@ -613,10 +620,12 @@
 		
 			<!--- Set the font color. --->
 			<cfset LOCAL.Font.SetColor(
-				CreateObject( 
-					"java",
-					"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'color' ] )#"
-					).GetIndex()
+				LOCAL.colorEnum.valueOf(
+					JavaCast(
+						"String",
+						"#UCase( LOCAL.PropertyMap[ 'color' ] )#"
+						)
+					).getIndex()
 				) />
 				
 		</cfif>

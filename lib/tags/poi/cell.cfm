@@ -57,6 +57,13 @@
 			default="d-mmm-yy"
 			/>
 			
+		<!--- Default percentage format. --->
+		<cfparam
+			name="ATTRIBUTES.PercentageFormat"
+			type="string"
+			default="0.00%"
+			/>
+			
 		<!--- Default CSS class name(s). --->
 		<cfparam
 			name="ATTRIBUTES.Class"
@@ -78,7 +85,25 @@
 			default=""
 			/>
 			
-			
+		<!--- Cell Indentation --->
+		<cfparam 
+			name="ATTRIBUTES.indent"
+			type="string"
+			default="0"	
+			/>	
+		
+		<!--- Cell Wrap Text --->
+		<cfparam name="Attributes.wraptext" type="string" default="false" />	
+		
+		<!--- Cell Line Height Count --->
+		<cfparam name="Attributes.linecount" type="numeric" default="0" />
+
+		<!--- Cell Comment --->	
+		<cfparam name="Attributes.comment" type="string" default="" />	
+		
+		<!--- Cell Hyperlink --->
+		<cfparam name="Attributes.hyperlink" type="string" default="" />
+		
 		<!--- If the user provided a number format, check to see if it is valid. --->
 		<cfif NOT StructKeyExists( VARIABLES.DocumentTag.NumberFormats, ATTRIBUTES.NumberFormat )>
 			
@@ -439,6 +464,19 @@
 						) />
 							
 				</cfcase>
+				<cfcase value="Percentage">
+				
+					<!--- 
+						We are going to assume that for percentage, we are going to 
+						use the number formatting. 
+					--->
+					<cfset VARIABLES.CellStyle.SetDataFormat(
+						VARIABLES.DocumentTag.DataFormat.GetBuiltinFormat(
+							JavaCast( "string", ATTRIBUTES.PercentageFormat )
+							)
+						) />
+							
+				</cfcase>
 			</cfswitch>
 		
 		</cfif>
@@ -456,12 +494,18 @@
 		--->
 		<cfset VARIABLES.Cell.SetCellStyle( VARIABLES.CellStyle ) />
 			
+		<!--- 
+			Set Cell Indentation
+		 --->
+		<cfif val(ATTRIBUTES.indent) GT 0>
+			<cfset VARIABLES.Cell.getCellStyle().setIndention(ATTRIBUTES.indent) />
+		</cfif>
 		
 		<!--- Check to see if we have more than one colspan on this cell. --->
 		<cfif (ATTRIBUTES.ColSpan GT 1)>
 			
 			<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
-				CreateObject( "java", "org.apache.poi.hssf.util.Region" ).Init(
+				CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress" ).Init(
 					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
 					JavaCast( "short", (ATTRIBUTES.Index - 1) ),
 					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
@@ -469,6 +513,30 @@
 					)
 				) />
 		
+		</cfif>
+		
+		<!--- 
+		 	Set wrap text
+		  --->
+		<cfif ATTRIBUTES.wraptext>
+			<cfset VARIABLES.Cell.getCellStyle().setwraptext(true) />
+			<cfset Variables.Cell.setCellValue(replaceNoCase(VARIABLES.Cell.getRichStringCellValue().getString(),"\n","#chr(10)#","all")) />
+			<cfif val(ATTRIBUTES.linecount) GT 0>
+				<cfset VARIABLES.ROWTAG.ROW.setHeightInPoints((ATTRIBUTES.linecount+1)*VARIABLES.SHEETTAG.SHEET.getDefaultRowHeightInPoints()) />
+				<cfset VARIABLES.SHEETTAG.sheet.autoSizeColumn(2) />				
+			</cfif>			
+		</cfif>
+
+		<!---
+			Set Hyper Link To cell
+		 --->
+		<cfif len(trim(Attributes.hyperlink)) and isValid('url', trim(Attributes.hyperlink))>
+			<cfset variables.hyperlinks = createObject("java","org.apache.poi.xssf.usermodel.XSSFHyperlink") />
+			<cfset variables.wb = VARIABLES.DocumentTag.WORKBOOK />
+			<cfset variables.helper = variables.wb.getCreationHelper() />
+			<cfset variables.link = variables.helper.createHyperlink(variables.hyperlinks.LINK_URL) />
+			<cfset variables.link.setAddress(trim(Attributes.hyperlink)) />
+			<cfset VARIABLES.Cell.setHyperlink(variables.link) />
 		</cfif>
 		
 		

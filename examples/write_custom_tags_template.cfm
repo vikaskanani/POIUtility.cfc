@@ -70,7 +70,7 @@
 --->
 <poi:document 
 	name="REQUEST.ExcelData"
-	template="#ExpandPath( './branded_template.xls' )#"
+	template="#ExpandPath( './branded_template.xlsx' )#"
 	style="font-family: verdana ; font-size: 10pt ; color: black ; white-space: nowrap ;">
 	
 	<!--- Define style classes. --->
@@ -151,7 +151,7 @@
 <!--- Tell the browser to expect an Excel file attachment. --->
 <cfheader
 	name="content-disposition"
-	value="attachment; filename=celebrities.xls"
+	value="attachment; filename=branded_template.xlsx"
 	/>
 	
 <!--- 

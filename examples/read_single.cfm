@@ -14,7 +14,7 @@
 		returned queries.
 	--->
 	<cfset objSheet = objPOI.ReadExcel( 
-		FilePath = ExpandPath( "./exercises.xls" ),
+		FilePath = ExpandPath( "./exercises.xlsx" ),
 		HasHeaderRow = true,
 		SheetIndex = 0
 		) />

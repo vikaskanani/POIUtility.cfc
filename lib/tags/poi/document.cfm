@@ -73,7 +73,7 @@
 		<cfif Len( ATTRIBUTES.Template )>
 		
 			<!--- Read in existing workbook. --->
-			<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook" ).Init(
+			<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init(
 				CreateObject( "java", "java.io.FileInputStream" ).Init(
 					JavaCast( "string", ATTRIBUTES.Template )
 					)
@@ -82,13 +82,16 @@
 		<cfelse>
 			
 			<!--- Create a new workbook. --->
-			<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook" ).Init() />
+			<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init() />
 			
 		</cfif>
 	
 		<!--- 
 			Create a data formatter utility object (we will need this to 
 			get the formatting index later on when we set the cell styles).
+		--->
+		<!--- 
+			I am still using hssf class here because xssf has lots of changes that I have not checked.
 		--->
 		<cfset VARIABLES.DataFormat = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFDataFormat" ) />
 	
@@ -102,6 +105,7 @@
 		<cfset VARIABLES.NumberFormats[ "($##,####0_);($##,####0)" ] = true />
 		<cfset VARIABLES.NumberFormats[ "($##,####0_);[Red]($##,####0)" ] = true />
 		<cfset VARIABLES.NumberFormats[ "($##,####0.00);($##,####0.00)" ] = true />
+		<cfset VARIABLES.NumberFormats[ "$##,####0.00_);($##,####0.00)" ] = true />
 		<cfset VARIABLES.NumberFormats[ "($##,####0.00_);[Red]($##,####0.00)" ] = true />
 		<cfset VARIABLES.NumberFormats[ "0%" ] = true />
 		<cfset VARIABLES.NumberFormats[ "0.00%" ] = true />

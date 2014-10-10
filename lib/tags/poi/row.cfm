@@ -141,6 +141,13 @@
 			<cfset VARIABLES.SheetTag.FreezeRow = VARIABLES.SheetTag.RowIndex />
 			
 		</cfif>
+		
+		<!--- 
+			Hide row
+		 --->
+		 <cfif structKeyExists(Attributes,'hiderow') and attributes.hiderow Eq true>
+			<cfset VARIABLES.Row.setZeroHeight(true) />
+		 </cfif>
 	
 	
 		<!--- Update the row count. --->

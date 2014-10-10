@@ -12,7 +12,7 @@
 		row, we want to strip it out of our returned queries.
 	--->
 	<cfset arrSheets = objPOI.ReadExcel( 
-		FilePath = ExpandPath( "./exercises.xls" ),
+		FilePath = ExpandPath( "./exercises.xlsx" ),
 		HasHeaderRow = true
 		) />
 		

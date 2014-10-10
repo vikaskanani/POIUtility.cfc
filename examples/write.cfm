@@ -51,7 +51,7 @@
 		objects). We can also define header and row CSS.
 	--->
 	<cfset objPOI.WriteExcel(
-		FilePath = ExpandPath( "./girls.xls" ),
+		FilePath = ExpandPath( "./girls.xlsx" ),
 		Sheets = objSheet,
 		HeaderCSS = "border-bottom: 2px solid dark_green ;",
 		RowCSS = "border-bottom: 1px dotted gray ;"

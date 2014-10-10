@@ -860,7 +860,7 @@
 			try {
 				LOCAL.FileInputStream = CreateObject( "java", "java.io.FileInputStream" ).Init( ARGUMENTS.FilePath );
 				LOCAL.WorkBook = CreateObject("java","org.apache.poi.hssf.usermodel.HSSFWorkbook").Init(LOCAL.FileInputStream);
-			} catch(org.apache.poi.poifs.filesystem.OfficeXmlFileException cfcatch) {
+			} catch(any cfcatch) {
 				LOCAL.FileInputStream = CreateObject( "java", "java.io.FileInputStream" ).Init( ARGUMENTS.FilePath );
 				LOCAL.WorkBook = CreateObject("java","org.apache.poi.xssf.usermodel.XSSFWorkbook").Init(LOCAL.FileInputStream);
 			}
