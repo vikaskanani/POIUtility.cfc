@@ -65,6 +65,19 @@
 			sheet or if we need to create a new one. If we are using a template, 
 			then we should just be able to grab the existing sheet.
 		--->
+
+		<!--- 
+			Sheet name validation:
+			Remove * : ? / \ [ ] characters
+			Trim length to 31
+			if final name is blank then, default name is sheet1
+		--->
+		<cfset ATTRIBUTES.Name = reReplaceNoCase(ATTRIBUTES.Name, "[*':\?\\\/\[\]]", "", 'all') />
+		<cfset ATTRIBUTES.Name = left(ATTRIBUTES.Name, 31) />
+		<cfif ATTRIBUTES.Name EQ "">
+			<cfset ATTRIBUTES.Name = "Sheet1" />
+		</cfif>
+		
 		<cfif (VARIABLES.DocumentTag.Workbook.GetNumberOfSheets() GTE VARIABLES.DocumentTag.SheetIndex)>
 		
 			<!--- We have an existing sheet to use. Grab it from the workbook. --->
