@@ -531,8 +531,8 @@
 			<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
 				CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress" ).Init(
 					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
-					JavaCast( "int", (ATTRIBUTES.Index - 1) ),
 					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
+					JavaCast( "int", (ATTRIBUTES.Index - 1) ),
 					JavaCast( "int", ((ATTRIBUTES.Index - 1) + ATTRIBUTES.ColSpan - 1) )
 					)
 				) />
