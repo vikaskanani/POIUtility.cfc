@@ -501,20 +501,6 @@
 			<cfset VARIABLES.Cell.getCellStyle().setIndention(ATTRIBUTES.indent) />
 		</cfif>
 		
-		<!--- Check to see if we have more than one colspan on this cell. --->
-		<cfif (ATTRIBUTES.ColSpan GT 1)>
-			
-			<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
-				CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress" ).Init(
-					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
-					JavaCast( "short", (ATTRIBUTES.Index - 1) ),
-					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
-					JavaCast( "short", ((ATTRIBUTES.Index - 1) + ATTRIBUTES.ColSpan - 1) )
-					)
-				) />
-		
-		</cfif>
-		
 		<!--- 
 		 	Set wrap text
 		  --->
@@ -539,6 +525,19 @@
 			<cfset VARIABLES.Cell.setHyperlink(variables.link) />
 		</cfif>
 		
+		<!--- Check to see if we have more than one colspan on this cell. --->
+		<cfif (ATTRIBUTES.ColSpan GT 1)>
+			
+			<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
+				CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress" ).Init(
+					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
+					JavaCast( "int", (ATTRIBUTES.Index - 1) ),
+					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
+					JavaCast( "int", ((ATTRIBUTES.Index - 1) + ATTRIBUTES.ColSpan - 1) )
+					)
+				) />
+		
+		</cfif>
 		
 		<!--- Update the cell count. --->
 		<cfset VARIABLES.RowTag.CellIndex += ATTRIBUTES.ColSpan />
