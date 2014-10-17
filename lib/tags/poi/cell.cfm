@@ -426,7 +426,8 @@
 			<cfset VARIABLES.CellStyle = VARIABLES.DocumentTag.CSSRule.ApplyToCellStyle(
 				VARIABLES.Style,
 				VARIABLES.DocumentTag.Workbook,
-				VARIABLES.CellStyle
+				VARIABLES.CellStyle,
+				VARIABLES.DocumentTag.useXmlFormat
 				) />
 				
 			<!--- Check to see which type of formatting we need to apply. --->
@@ -517,7 +518,11 @@
 			Set Hyper Link To cell
 		 --->
 		<cfif len(trim(Attributes.hyperlink)) and isValid('url', trim(Attributes.hyperlink))>
-			<cfset variables.hyperlinks = createObject("java","org.apache.poi.xssf.usermodel.XSSFHyperlink") />
+			<cfif VARIABLES.DocumentTag.useXmlFormat>
+				<cfset variables.hyperlinks = createObject("java","org.apache.poi.ss.usermodel.Hyperlink") />
+			<cfelse>
+				<cfset variables.hyperlinks = createObject("java","org.apache.poi.hssf.usermodel.HSSFHyperlink") />
+			</cfif>
 			<cfset variables.wb = VARIABLES.DocumentTag.WORKBOOK />
 			<cfset variables.helper = variables.wb.getCreationHelper() />
 			<cfset variables.link = variables.helper.createHyperlink(variables.hyperlinks.LINK_URL) />
@@ -528,14 +533,26 @@
 		<!--- Check to see if we have more than one colspan on this cell. --->
 		<cfif (ATTRIBUTES.ColSpan GT 1)>
 			
-			<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
-				CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress" ).Init(
-					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
-					JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
-					JavaCast( "int", (ATTRIBUTES.Index - 1) ),
-					JavaCast( "int", ((ATTRIBUTES.Index - 1) + ATTRIBUTES.ColSpan - 1) )
-					)
-				) />
+			<cfif VARIABLES.DocumentTag.useXmlFormat>
+				<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
+					CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress" ).Init(
+						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
+						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
+						JavaCast( "int", (ATTRIBUTES.Index - 1) ),
+						JavaCast( "int", ((ATTRIBUTES.Index - 1) + ATTRIBUTES.ColSpan - 1) )
+						)
+					) />
+					
+			<cfelse>
+				<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
+					CreateObject( "java", "org.apache.poi.hssf.util.Region" ).Init(
+						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
+						JavaCast( "short", (ATTRIBUTES.Index - 1) ),
+						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
+						JavaCast( "short", ((ATTRIBUTES.Index - 1) + ATTRIBUTES.ColSpan - 1) )
+						)
+					) />
+			</cfif>
 		
 		</cfif>
 		

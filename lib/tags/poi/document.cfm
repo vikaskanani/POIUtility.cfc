@@ -47,6 +47,15 @@
 			type="string"
 			default=""
 			/>
+
+		<!--- 
+			Document fomrat
+		--->
+		<cfparam
+			name="ATTRIBUTES.useXmlFormat"
+			type="string"
+			default="false"
+			/>
 	
 	
 		<!--- Make sure that we have the proper attributes. --->
@@ -73,16 +82,28 @@
 		<cfif Len( ATTRIBUTES.Template )>
 		
 			<!--- Read in existing workbook. --->
-			<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init(
-				CreateObject( "java", "java.io.FileInputStream" ).Init(
-					JavaCast( "string", ATTRIBUTES.Template )
-					)
-				) />
+			<cfif ATTRIBUTES.useXmlFormat>
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init(
+					CreateObject( "java", "java.io.FileInputStream" ).Init(
+						JavaCast( "string", ATTRIBUTES.Template )
+						)
+					) />
+			<cfelse>
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook" ).Init(
+					CreateObject( "java", "java.io.FileInputStream" ).Init(
+						JavaCast( "string", ATTRIBUTES.Template )
+						)
+					) />
+			</cfif>
 		
 		<cfelse>
 			
 			<!--- Create a new workbook. --->
-			<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init() />
+			<cfif ATTRIBUTES.useXmlFormat>
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init() />
+			<cfelse>
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook" ).Init() />
+			</cfif>
 			
 		</cfif>
 	

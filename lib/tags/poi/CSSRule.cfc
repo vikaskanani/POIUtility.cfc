@@ -210,7 +210,13 @@
 			required="true"
 			hint="CSS properties for to be added to the given map (may have multiple properties separated by semi-colons)."
 			/>
-			
+		
+		<cfargument
+			name="useXmlFormat"
+			type="any"
+			required="true"
+			/>
+
 		<!--- Set up local scope. --->
 		<cfset var LOCAL = {} />
 		
@@ -429,14 +435,23 @@
 				to use IndexedColors to get the index 
 				value of the color.
 			--->
-			<cfset ARGUMENTS.CellStyle.SetFillForegroundColor(
-				LOCAL.colorEnum.valueOf(
-					JavaCast(
-						"String",
-						"#UCase( LOCAL.PropertyMap[ 'background-color' ] )#"
-						)
-					).getIndex()
-				) />
+			<cfif ARGUMENTS.useXmlFormat>
+				<cfset ARGUMENTS.CellStyle.SetFillForegroundColor(
+					LOCAL.colorEnum.valueOf(
+						JavaCast(
+							"String",
+							"#UCase( LOCAL.PropertyMap[ 'background-color' ] )#"
+							)
+						).GetIndex()
+					) />
+			<cfelse>
+				<cfset ARGUMENTS.CellStyle.SetFillForegroundColor(
+					CreateObject(
+						"java",
+						"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'background-color' ] )#"
+						).GetIndex()
+					) />
+			</cfif>
 				
 				
 			<!--- Set a solid background fill. --->
@@ -543,22 +558,36 @@
 					)>
 					
 					<!--- Get the border color. --->
-					<cfset LOCAL.BorderColor = LOCAL.colorEnum.valueOf(
-						JavaCast(
-							"String",
-							"#UCase( LOCAL.PropertyMap[ 'border-#LOCAL.BorderSide#-color' ] )#"
-							)
-						).getIndex() />
+					<cfif ARGUMENTS.useXmlFormat>
+						<cfset LOCAL.BorderColor = LOCAL.colorEnum.valueOf(
+							JavaCast(
+								"String",
+								"#UCase( LOCAL.PropertyMap[ 'border-#LOCAL.BorderSide#-color' ] )#"
+								)
+							).GetIndex() />
+					<cfelse>
+						<cfset LOCAL.BorderColor = CreateObject(
+							"java",
+							"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'border-#LOCAL.BorderSide#-color' ] )#"
+							).GetIndex() />
+					</cfif>
 				
 				<cfelse>
 					
 					<!--- Get the default border color (black). --->
-					<cfset LOCAL.BorderColor = LOCAL.colorEnum.valueOf(
-						JavaCast(
-							"String",
-							"BLACK"
-							)
-						).getIndex() />
+					<cfif ARGUMENTS.useXmlFormat>
+						<cfset LOCAL.BorderColor = LOCAL.colorEnum.valueOf(
+							JavaCast(
+								"String",
+								"BLACK"
+								)
+							).GetIndex() />
+					<cfelse>
+						<cfset LOCAL.BorderColor = CreateObject(
+							"java",
+							"org.apache.poi.hssf.util.HSSFColor$BLACK"
+							).GetIndex() />
+					</cfif>
 						
 				</cfif>
 			
@@ -619,14 +648,23 @@
 			)>
 		
 			<!--- Set the font color. --->
-			<cfset LOCAL.Font.SetColor(
-				LOCAL.colorEnum.valueOf(
-					JavaCast(
-						"String",
-						"#UCase( LOCAL.PropertyMap[ 'color' ] )#"
-						)
-					).getIndex()
-				) />
+			<cfif ARGUMENTS.useXmlFormat>
+				<cfset LOCAL.Font.SetColor(
+					LOCAL.colorEnum.valueOf(
+						JavaCast(
+							"String",
+							"#UCase( LOCAL.PropertyMap[ 'color' ] )#"
+							)
+						).GetIndex()
+					) />
+			<cfelse>
+				<cfset LOCAL.Font.SetColor(
+					CreateObject(
+						"java",
+						"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'color' ] )#"
+						).GetIndex()
+					) />
+			</cfif>
 				
 		</cfif>
 		

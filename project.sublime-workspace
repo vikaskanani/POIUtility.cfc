@@ -1,0 +1,1819 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rerep",
+				"reReplaceNoCase	fn. (cfscript)"
+			],
+			[
+				"replace",
+				"replaceNoCase	fn. (cfscript)"
+			],
+			[
+				"work",
+				"workcomplete"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"win",
+				"WinFollowUpcomment"
+			],
+			[
+				"Sta",
+				"Statuswindow"
+			],
+			[
+				"requ",
+				"requestqueue"
+			],
+			[
+				"me",
+				"method=\"get\"	method"
+			],
+			[
+				"documentty",
+				"documenttypeid"
+			],
+			[
+				"empl",
+				"employeeid"
+			],
+			[
+				"employ",
+				"employeeId"
+			],
+			[
+				"ticket",
+				"ticketId"
+			],
+			[
+				"cf",
+				"cf_sql_integer"
+			],
+			[
+				"action",
+				"action=\"delete\"	action"
+			],
+			[
+				"ac",
+				"action=\"list\"	action"
+			],
+			[
+				"Realo",
+				"RealtorSign"
+			],
+			[
+				"co",
+				"collection	@collection"
+			],
+			[
+				"cfcon",
+				"cfcontinue	Tag (cmfl)"
+			],
+			[
+				"spreadsh",
+				"spreadsheet"
+			],
+			[
+				"contractor",
+				"contractorid"
+			],
+			[
+				"structfin",
+				"structFindValue	fn. (cfscript)"
+			],
+			[
+				"r",
+				"recurse=\"true\"	recurse"
+			],
+			[
+				"cfont",
+				"cfcontinue	Tag (cmfl)"
+			],
+			[
+				"arr",
+				"arrayAppend	fn. (cfscript)"
+			],
+			[
+				"contracto",
+				"contractorid"
+			],
+			[
+				"contrac",
+				"contractorid"
+			],
+			[
+				"ListFid",
+				"listFindNoCase	fn. (cfscript)"
+			],
+			[
+				"c",
+				"cfsqltype=\"cf_sql_numeric\"	cfsqltype"
+			],
+			[
+				"ty",
+				"type=\"string\"	type"
+			],
+			[
+				"depart",
+				"departmentId"
+			],
+			[
+				"property",
+				"propertyaddress"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"der",
+				"deserializeJSON	fn. (cfscript)"
+			],
+			[
+				"unit",
+				"unitId"
+			],
+			[
+				"check",
+				"checked"
+			],
+			[
+				"res",
+				"result	@result"
+			],
+			[
+				"aut",
+				"automaticallyEmail"
+			],
+			[
+				"contra",
+				"contractorid"
+			],
+			[
+				"structKey",
+				"structKeyExists	fn. (cfscript)"
+			],
+			[
+				"servicegr",
+				"serviceGroupID"
+			],
+			[
+				"servie",
+				"serviceid"
+			],
+			[
+				"created",
+				"createdby"
+			],
+			[
+				"req",
+				"required=\"true\"	required"
+			],
+			[
+				"iccrepo",
+				"iccreportedon"
+			],
+			[
+				"excel",
+				"Excel_property"
+			],
+			[
+				"WATE",
+				"WATER_2"
+			],
+			[
+				"EE",
+				"ELECTRIC_1"
+			],
+			[
+				"WATER",
+				"WATER_1"
+			],
+			[
+				"getBy",
+				"getByAttributesQuery"
+			],
+			[
+				"structkey",
+				"structKeyExists	fn. (cfscript)"
+			],
+			[
+				"cfinv",
+				"cfinvoke	Tag (cmfl)"
+			],
+			[
+				"Client",
+				"ClientId"
+			],
+			[
+				"getJobi",
+				"getJobid"
+			],
+			[
+				"bn",
+				"BankId"
+			],
+			[
+				"servicest",
+				"ServiceStatus"
+			],
+			[
+				"ass",
+				"assetManagerId"
+			],
+			[
+				"_id",
+				"_idx_membername"
+			],
+			[
+				"re",
+				"remote"
+			],
+			[
+				"submission",
+				"submissiondate"
+			],
+			[
+				"struct",
+				"structNew	fn. (cfscript)"
+			],
+			[
+				"dbty",
+				"dbtype=\"query\"	dbtype"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"ListFind",
+				"listFindNoCase	fn. (cfscript)"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"jobnote_",
+				"jobnotes_system"
+			],
+			[
+				"jobnotes",
+				"jobnotes_updates"
+			],
+			[
+				"cf_sql_ti",
+				"cf_sql_tinyint"
+			],
+			[
+				"jobnotes_o",
+				"jobnotes_order"
+			],
+			[
+				"jobnotes_",
+				"jobnotes_system"
+			],
+			[
+				"to",
+				"totalrecords"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"exce",
+				"excel_propertyDetail"
+			],
+			[
+				"create",
+				"createdDate"
+			],
+			[
+				"Find",
+				"findNoCase	fn. (cfscript)"
+			],
+			[
+				"list",
+				"list=\"true\"	list"
+			],
+			[
+				"var",
+				"variables"
+			],
+			[
+				"find",
+				"findNoCase	fn. (cfscript)"
+			],
+			[
+				"cfdocue",
+				"cfdocument"
+			],
+			[
+				"lo",
+				"localurl"
+			],
+			[
+				"page",
+				"page-break-after"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"d",
+				"dbtype=\"query\"	dbtype"
+			],
+			[
+				"cf_sql_nu",
+				"cf_sql_numeric"
+			],
+			[
+				"n",
+				"numeric"
+			],
+			[
+				"invoice",
+				"invoiceID"
+			],
+			[
+				"arg",
+				"arguments"
+			],
+			[
+				"structke",
+				"structKeyExists	fn. (cfscript)"
+			],
+			[
+				"structKe",
+				"structKeyExists	fn. (cfscript)"
+			],
+			[
+				"stuctkey",
+				"structKeyList	fn. (cfscript)"
+			],
+			[
+				"stuctk",
+				"structKeyExists	fn. (cfscript)"
+			],
+			[
+				"docume",
+				"documentID"
+			],
+			[
+				"question",
+				"questionid"
+			],
+			[
+				"document",
+				"documentid"
+			],
+			[
+				"li",
+				"list=\"true\"	list"
+			],
+			[
+				"is",
+				"isDefined	fn. (cfscript)"
+			],
+			[
+				"docu",
+				"documentid"
+			],
+			[
+				"data-",
+				"data-documentquestion"
+			],
+			[
+				"photo",
+				"photoprovided_"
+			],
+			[
+				"que",
+				"questionid"
+			],
+			[
+				"qu",
+				"questionid"
+			],
+			[
+				"q",
+				"questionid"
+			],
+			[
+				"doc",
+				"documentid"
+			],
+			[
+				"createo",
+				"createobj	createobj"
+			],
+			[
+				"fun",
+				"fun	function"
+			],
+			[
+				"funct",
+				"functions"
+			],
+			[
+				"retur",
+				"returnformat"
+			],
+			[
+				"seriali",
+				"serializeJSON	fn. (cfscript)"
+			],
+			[
+				"defic",
+				"deficient"
+			],
+			[
+				"prope",
+				"propertyId"
+			],
+			[
+				"menu",
+				"menuvalues"
+			],
+			[
+				"cfs",
+				"cfsqltype=\"cf_sql_numeric\"	cfsqltype"
+			],
+			[
+				"DODn",
+				"DODNeededMsg"
+			],
+			[
+				"DOD",
+				"DODNeededMsg"
+			],
+			[
+				"requi",
+				"requires"
+			],
+			[
+				"sele",
+				"selectedOption"
+			],
+			[
+				"owner",
+				"ownerType"
+			],
+			[
+				"titl",
+				"titleId"
+			],
+			[
+				"ou",
+				"output"
+			],
+			[
+				"_",
+				"_blank"
+			],
+			[
+				"ta",
+				"target"
+			],
+			[
+				"accepted",
+				"acceptedby"
+			],
+			[
+				"acc",
+				"acceptedby"
+			],
+			[
+				"contractor_",
+				"contractor_jobs"
+			],
+			[
+				"type",
+				"type=\"dir\"	type"
+			],
+			[
+				"array",
+				"arrayLen	fn. (cfscript)"
+			],
+			[
+				"DRO",
+				"DROPOPTIONID"
+			],
+			[
+				"DROI",
+				"DROPID"
+			],
+			[
+				"cons",
+				"console"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lib/tags/poi/cell.cfm",
+			"settings":
+			{
+				"buffer_size": 16899,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/tags/poi/sheet.cfm",
+			"settings":
+			{
+				"buffer_size": 6563,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/tags/poi/document.cfm",
+			"settings":
+			{
+				"buffer_size": 9083,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/tags/poi/CSSRule.cfc",
+			"settings":
+			{
+				"buffer_size": 41533,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"local",
+				"Local History: Browse"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"project",
+				"Project: Edit"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pre",
+				"Preferences: Settings - User"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Discover Packages"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"k",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"convert",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"sett",
+				"Preferences: Settings - User"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"update",
+				"Gist: Update File"
+			],
+			[
+				"open",
+				"Gist: Open Gist"
+			],
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"copy",
+				"File: Copy Path"
+			],
+			[
+				"confi",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"xiki",
+				"Create Xiki Buffer"
+			],
+			[
+				"upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Snippet: loca",
+				"Snippet: localdump"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"instla",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: local",
+				"Snippet: localdump"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/DATA/POIUtility.cfc/lib/tags/poi/document.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/invoicecommreportdetail.cfm",
+		"/C/DATA/workspace/REOAllegiance/customtags/poi/sheet.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/avaragebidreport.cfm",
+		"/C/DATA/workspace/REOAllegiance/client/exportBidToExcel.cfm",
+		"/C/DATA/workspace/REOAllegiance/applicationProxy.cfc",
+		"/C/DATA/workspace/REOAllegiance/liveBulkScripts/createticketfromemailsentlog.cfm",
+		"/C/DATA/workspace/REOAllegiance/Schedule/createschedule.cfm",
+		"/C/DATA/workspace/REOAllegiance/test/scribble.cfm",
+		"/C/DATA/workspace/REOAllegiance/contractor/vendor_header.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/order/exportOrdersToExcel.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/home/ContractorUnacceptedPhotos_export.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/routinebulkaction.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/routinebulkschedule.cfm",
+		"/C/DATA/workspace/REOAllegiance/contractor/welcome.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/jobServices_report_exporteoexcel.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/routine/grasscutPropertyPrint.cfm",
+		"/C/DATA/workspace/REOAllegiance/customtags/poi/write_custom_tags.cfm",
+		"/C/DATA/workspace/REOAllegiance/customtags/poi/read-2007.cfm",
+		"/C/DATA/workspace/REOAllegiance/customtags/poi/write_custom_tags_formula.cfm",
+		"/C/DATA/workspace/REOAllegiance/customtags/poi/write_custom_tags_template.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/POIUtility.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/propertySummaryInclude/clientupdate.js",
+		"/C/DATA/workspace/REOAllegiance/ami/propertySummaryInclude/clientUpdate.cfm",
+		"/C/DATA/workspace/REOAllegiance/Schedule/memberemailscheduler.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/updates_2Gateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/updatereport.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/settings/updateDrops.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/settings/customserviceduedate.cfm",
+		"/C/DATA/workspace/REOAllegiance/customtags/poi/cell.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/invoice/flaggedclientinvoice_export.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/workstatusextGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/settings/updateDrops.js",
+		"/C/DATA/workspace/REOAllegiance/cfc/updates/updateDropOptionDetailDAO.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/updates/updateDropOptionGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/updatesGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/settings/updateDrops_action.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/settings/copyUpdateDrops.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/updateDetailsDAO.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/updateDetails.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/Client_ViewUpdates.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/client.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Contractor_services.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/jobservicelist.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/updates/updateDropOptionDetail.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/servicecompleted_report.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/jobservicelist.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/contractorreportcard.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/contractor_job_order_action.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/memberemailschedule.cfm",
+		"/C/DATA/workspace/REOAllegiance/Schedule/updatereport.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/settings/customserviceduedateadd.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/eodmembersdetail.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/orders/propertyAddressGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/createform/AVM_Test.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/PCR_mobile.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/PCR_short_mobile.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/pcr_short_worksheet.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/PCR_test.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/pcr_worksheet.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/contractor_invoice_statistics.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/PCR.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/routine/OrderRoutineServiceGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/liveBulkScripts/extractclientdirectbids.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/PCR_short.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/Occupancy_Inspection_Report_new.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/Occupancy_Inspection_Report_new_for_worksheet.cfm",
+		"/C/DATA/workspace/REOAllegiance/createform/AVM_Prespro_Property_Condition_Report.cfm",
+		"/C/DATA/workspace/REOAllegiance/contractor/mob/createForm/Occupancy_Inspection_Report.cfm",
+		"/C/DATA/workspace/REOAllegiance/Schedule/requestqueue.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/documentphotodetailGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/client_ViewInvoice.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/contractorInvoiceReport.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/invoicePropertyCost.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/reports/invoicesummary_report.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/RTOrder/AddEditPropertyType.cfm",
+		"/C/DATA/workspace/REOAllegiance/contractor/job_document.cfm",
+		"/C/DATA/workspace/REOAllegiance/contractor/job_search.cfm",
+		"/C/DATA/workspace/REOAllegiance/client/orders/maintenancepropertyAddress.cfm",
+		"/C/DATA/workspace/REOAllegiance/client/orders/js/eviction.js",
+		"/C/DATA/workspace/REOAllegiance/contractor/mob/Add_PropertyType.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/Client_PropertyEdit.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Property_VPR.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/client_property.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/orders/propertyType.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/updates/propertyTypesGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/propertySummaryInclude/chkandupdatepropertyType.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/order/propertyPage.CFM",
+		"/C/DATA/workspace/REOAllegiance/ami/order/PropertyAddress.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/js/client_property.js",
+		"/C/DATA/workspace/REOAllegiance/ami/contractor_job_order.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/order/js/eviction.js",
+		"/C/DATA/workspace/REOAllegiance/ami/RTOrder/RTOrder_action.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/membermdfydel.cfm",
+		"/C/DATA/workspace/REOAllegiance/js/general.js",
+		"/C/DATA/workspace/REOAllegiance/ticketSystem/cfc/personGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/emailsGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/membermdfydela.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/membersDAO.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/memberemailGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/membersGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/membermdfydelb.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/orders/orderStatusChangeLogGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/cfc/orders/orders_newGateway.cfc",
+		"/C/DATA/workspace/REOAllegiance/ticketSystem/cfc/personService.cfc",
+		"/C/DATA/workspace/REOAllegiance/client/bulkOrder_action.cfm",
+		"/C/DATA/workspace/REOAllegiance/cfc/memberemail.cfc",
+		"/C/DATA/workspace/REOAllegiance/ami/js/jobNote.js",
+		"/C/DATA/workspace/REOAllegiance/include/downloaddocandphoto.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/js/Client_Statistics.js",
+		"/C/DATA/workspace/REOAllegiance/ami/routine/include_grass_pp_notice.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/addContractornote.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/addPPnote.cfm",
+		"/C/DATA/workspace/REOAllegiance/client/welcome.cfm",
+		"/C/DATA/workspace/REOAllegiance/client/view_clientordernew.cfm",
+		"/C/DATA/workspace/REOAllegiance/js/cfvirtualwindow.js",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/viewPPLog.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/invoiceSetPayment.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/ClientPPAdd.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/propertySummaryInclude/PPSummary.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/propertySummaryInclude/PropertySummary.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/client_personalProperty.js",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/Cient_ViewPersonalProperty.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/Cient_ClosedPPStatistics.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/bidToEmailSetting.cfm",
+		"/C/DATA/workspace/REOAllegiance/ami/Client/bids_closereject.cfm",
+		"/C/Users/vikas.ISUMMATION/AppData/Roaming/Sublime Text 2/Packages/View In Browser/View In Browser.sublime-settings",
+		"/C/Users/vikas.ISUMMATION/AppData/Roaming/Sublime Text 2/Packages/User/View In Browser.sublime-settings"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfc",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\schedule,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\cfc\\updates,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"<project>,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"<project>,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance",
+			"C:\\DATA\\workspace\\REOAllegiance\\Schedule",
+			"<project>,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance",
+			"C:\\DATA\\workspace\\REOAllegiance\\Schedule",
+			"C:\\DATA\\workspace\\REOAllegiance\\client",
+			"<project>\\client,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"<project>,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfc,*.cfm,*.js",
+			"<project>,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl,*.xml",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl,*,xml",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\ticketsystem,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\ticketsystem,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\ticketsystem,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\createform,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor\\mob,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\createform\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\createform,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\client,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance\\contractor,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css,*.xsl",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js,*.css",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfm,*.cfc,*.js",
+			"C:\\DATA\\workspace\\REOAllegiance,*.css",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfc,*.cfm,*.js",
+			"C:\\DATA\\workspace\\REOAllegiance,*.cfc|*.cfm|*.js",
+			"C:\\DATA\\workspace\\REOAllegiance"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"useXmlFormat",
+			"colspan",
+			"short",
+			"merg",
+			"RowTag",
+			"variables.cell",
+			"cell",
+			"<poi:document",
+			"attachment",
+			"CELL_TYPE_FORMULA",
+			"countyexport.cfm",
+			".xls",
+			"routinebulk.cfm",
+			"routinebulkaction.cfm",
+			"routinebulkschedule.cfm",
+			"name",
+			"sheet",
+			".xls",
+			"GetIndex",
+			"getIndex",
+			"colorEnum",
+			"xss",
+			"green",
+			"POIColors",
+			"IndexedColors",
+			"colorEnum",
+			"CellRangeAddress",
+			"xssf",
+			"XSSF",
+			"xssf",
+			"XSSF",
+			"xssf",
+			"colorEnum",
+			"xss",
+			".xls",
+			"getFormat",
+			"hssf",
+			"xssf",
+			"CreateCellStyle",
+			"createCellStyle",
+			"jar",
+			".jar",
+			"getFormat",
+			"GetBuiltinFormat",
+			"DataFormat",
+			"hssf.usermodel.HSSFWorkbook",
+			"HSSF",
+			"xssf",
+			"HSSF",
+			"HSSFColor",
+			"hssf",
+			"hyperlink",
+			"qworkstatusext",
+			"poi:document",
+			"style",
+			"workst",
+			"n/a - occupied",
+			"na - occupied",
+			"qworkstatusext",
+			"workstatus",
+			"queryRowToStruct",
+			"dropoptionid",
+			"WorkCompletedDate",
+			"workComplete",
+			"setting",
+			"fun_chkUpdateDropOption",
+			"updateDropOption",
+			"WORKCOMPLETE",
+			"frmDropUpdate_Callback",
+			"updateDrops_edit",
+			"workCompleteExt",
+			"frmDropUpdate_Callback",
+			"workComplete",
+			"createObject(\"component\",\"cfc.updates.updateDropOptionDetailDAO\")",
+			"queryRowToStruct",
+			"isarchive",
+			"workComplete",
+			"frmDropUpdate_Callback",
+			"workComplete",
+			"workCompleteExt",
+			"workCompleteex",
+			"workComplete",
+			"fun_changeworkComplete",
+			"workComplete",
+			"WorkComplete",
+			"Work Not Completed",
+			"isWorkComplete",
+			"workstatus",
+			"getUpdatesForUpdateReportWhenHasJobList",
+			"Update Report",
+			"mobile home",
+			"propertytype\"",
+			"orderby=\"propertyTypes.pType\"",
+			"propertyTypes",
+			"orders.propertyType",
+			"getAllPropertyType",
+			"checkPropertyUnit",
+			"propertyType.cfc",
+			"getAllPropertyType",
+			"qPropertyType",
+			"propertyTypes",
+			"sendmailonchangestatus",
+			"alternateemails",
+			"cntsecondaryemail",
+			"checkMemberEmail",
+			"Database",
+			"local.",
+			"checkMemberEmail",
+			"getIdByattributes",
+			"qPerson",
+			"memberemailGateway",
+			"state",
+			"addsecondaryemail",
+			"secondaryemail",
+			"please sel",
+			"email",
+			"addsecondaryemail\n",
+			"true",
+			"secondaryemail",
+			"addsecondaryemail",
+			"secondaryemail",
+			"addsecondaryemail",
+			"secondaryemail",
+			"set me",
+			"img",
+			"createticket",
+			"ticket_person",
+			"cfobjectcache"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"DODNeeded",
+			"preforeclosureinspection_worksheet",
+			"images/pdf.gif\"/></a><",
+			"/images/pdf.gif\" /></a>",
+			"$.fn.virtualwindow",
+			"jQuery('##branchID option:eq(0)').prop('selected',true);",
+			"\\1\\2\\\\\"showCluetip\\\\\");'",
+			"\\1\\2\\\"showCluetip\\\");'",
+			"\\1\\2}).trigger(\"showCluetip\");'",
+			"\\1\\2}).trigger('showCluetip');\"",
+			"\\1\\2}).trigger(\"showCluetip\");'",
+			"\\1\\2}).trigger(\"showCluetip\");",
+			"\\1\\2}).trigger('showCluetip');",
+			"Identifier",
+			",\\r\\n",
+			"FAListingAgentID",
+			"",
+			"propertyId",
+			"#",
+			"application.OfficeAddress",
+			"application.email.orderteam",
+			"application.email.info",
+			"##",
+			"",
+			"$(\"#OIR_33_2\").is(\":checked\") && $(\"#OIR_4_2\").is(\":checked\");",
+			"$(\"#PCR_33_2\").is(\":checked\") && $(\"#PCR_4_2\").is(\":checked\");",
+			"&& ($(\"#PCR_4_1\").is(\":checked\") || $(\"#PCR_33_1\")",
+			"",
+			"arguments.employeeId",
+			"#",
+			"form.isdeleted",
+			"select",
+			"input ",
+			"href=\"javascript:void(0);\"",
+			"''",
+			"Variables.propertyId",
+			"if(val(objCustomer.getGroupId()) GT 0) {",
+			"if(val(objCustomer.getGroupId()) GT 0 {",
+			"class=\"col-xs-12 col-sm-6 col-md-6 col-lg-4\"",
+			"href=\"javascript:void(0)\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lib/tags/poi/cell.cfm",
+					"settings":
+					{
+						"buffer_size": 16899,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15358,
+								15358
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9096.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lib/tags/poi/sheet.cfm",
+					"settings":
+					{
+						"buffer_size": 6563,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2074,
+								2074
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1134.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "lib/tags/poi/document.cfm",
+					"settings":
+					{
+						"buffer_size": 9083,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2768,
+								2768
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ColdFusion/HTML+CFML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1172.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "lib/tags/poi/CSSRule.cfc",
+					"settings":
+					{
+						"buffer_size": 41533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8719,
+								8719
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ColdFusion/ColdFusionCFC.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3349.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 94.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"css",
+				"lib/tags/poi/CSSRule.cfc"
+			],
+			[
+				"documen",
+				"lib/tags/poi/document.cfm"
+			],
+			[
+				"sheet",
+				"lib/tags/poi/sheet.cfm"
+			],
+			[
+				"document",
+				"lib/tags/poi/document.cfm"
+			],
+			[
+				"cell",
+				"lib/tags/poi/cell.cfm"
+			],
+			[
+				"summarycha",
+				"ami/reports/invoicesummarychartexport.cfm"
+			],
+			[
+				"invoicecommi",
+				"ami/reports/invoicecommreportdetail.cfm"
+			],
+			[
+				"avaragebidreport",
+				"ami/avaragebidreport.cfm"
+			],
+			[
+				"exportbid",
+				"client/exportBidToExcel.cfm"
+			],
+			[
+				"createticket",
+				"liveBulkScripts/createticketfromemailsentlog.cfm"
+			],
+			[
+				"scrib",
+				"test/scribble.cfm"
+			],
+			[
+				"createsche",
+				"Schedule/createschedule.cfm"
+			],
+			[
+				"vend",
+				"contractor/vendor_header.cfm"
+			],
+			[
+				"welcome.cfm",
+				"contractor/welcome.cfm"
+			],
+			[
+				"vendor",
+				"contractor/vendor_header.cfm"
+			],
+			[
+				"welcome.cf",
+				"contractor/welcome.cfm"
+			],
+			[
+				"grasscutpropertyprint",
+				"ami/routine/grasscutPropertyPrint.cfm"
+			],
+			[
+				"jobservicereportex",
+				"ami/reports/jobServices_report_exporteoexcel.cfm"
+			],
+			[
+				"routinebulkschedule",
+				"ami/routinebulkschedule.cfm"
+			],
+			[
+				"routinebulkaction.cfm",
+				"ami/routinebulkaction.cfm"
+			],
+			[
+				"contractorunacceptedphotos_export",
+				"ami/home/ContractorUnacceptedPhotos_export.cfm"
+			],
+			[
+				"exportorder",
+				"ami/order/exportOrdersToExcel.cfm"
+			],
+			[
+				"poiu",
+				"cfc/POIUtility.cfc"
+			],
+			[
+				"appl",
+				"applicationProxy.cfc"
+			],
+			[
+				"writecust",
+				"customtags/poi/write_custom_tags_template.cfm"
+			],
+			[
+				"read-20",
+				"customtags/poi/read-2007.cfm"
+			],
+			[
+				"writecus",
+				"customtags/poi/write_custom_tags.cfm"
+			],
+			[
+				"document.cfm",
+				"customtags/poi/document.cfm"
+			],
+			[
+				"cssrule",
+				"customtags/poi/CSSRule.cfc"
+			],
+			[
+				"cell.cfm",
+				"customtags/poi/cell.cfm"
+			],
+			[
+				"customserviceduedate",
+				"ami/settings/customserviceduedate.cfm"
+			],
+			[
+				"updatedrops",
+				"ami/settings/updateDrops.cfm"
+			],
+			[
+				"flaggedclientinvoice_export",
+				"ami/invoice/flaggedclientinvoice_export.cfm"
+			],
+			[
+				"cellc",
+				"customtags/poi/cell.cfm"
+			],
+			[
+				"updatereport",
+				"ami/reports/updatereport.cfm"
+			],
+			[
+				"updatedeta",
+				"cfc/updateDetailsDAO.cfc"
+			],
+			[
+				"updatedetails.f",
+				"cfc/updateDetails.cfc"
+			],
+			[
+				"updatesgta",
+				"cfc/updatesGateway.cfc"
+			],
+			[
+				"updatedropoptiongateway.cfc",
+				"cfc/updates/updateDropOptionGateway.cfc"
+			],
+			[
+				"updatedropoptiondet",
+				"cfc/updates/updateDropOptionDetailDAO.cfc"
+			],
+			[
+				"updatedropoptiondetail",
+				"cfc/updates/updateDropOptionDetail.cfc"
+			],
+			[
+				"updatedrops_action",
+				"ami/settings/updateDrops_action.cfm"
+			],
+			[
+				"updatedrop",
+				"ami/settings/updateDrops.js"
+			],
+			[
+				"workstatusex",
+				"cfc/workstatusextGateway.cfc"
+			],
+			[
+				"update2",
+				"cfc/updates_2Gateway.cfc"
+			],
+			[
+				"orderroutineservicegateway",
+				"cfc/routine/OrderRoutineServiceGateway.cfc"
+			],
+			[
+				"pcr.",
+				"createform/PCR.cfm"
+			],
+			[
+				"requestqueue",
+				"Schedule/requestqueue.cfm"
+			],
+			[
+				"documentphotod",
+				"cfc/documentphotodetailGateway.cfc"
+			],
+			[
+				"propertytypesgateway",
+				"cfc/updates/propertyTypesGateway.cfc"
+			],
+			[
+				"propertytype",
+				"cfc/orders/propertyType.cfc"
+			],
+			[
+				"propertytypes",
+				"cfc/updates/propertyTypesGateway.cfc"
+			],
+			[
+				"client_property",
+				"ami/Client/client_property.cfm"
+			],
+			[
+				"memberemailgateway",
+				"cfc/memberemailGateway.cfc"
+			],
+			[
+				"personservice",
+				"ticketSystem/cfc/personService.cfc"
+			],
+			[
+				"persongate",
+				"ticketSystem/cfc/personGateway.cfc"
+			],
+			[
+				"membermdfydelb",
+				"ami/membermdfydelb.cfm"
+			],
+			[
+				"general",
+				"js/general.js"
+			],
+			[
+				"memberemailgate",
+				"cfc/memberemailGateway.cfc"
+			],
+			[
+				"membermdfydela",
+				"ami/membermdfydela.cfm"
+			],
+			[
+				"membermdfydel",
+				"ami/membermdfydel.cfm"
+			],
+			[
+				"memberemail.cfc",
+				"cfc/memberemail.cfc"
+			],
+			[
+				"emailgate",
+				"cfc/emailsGateway.cfc"
+			],
+			[
+				"membersga",
+				"cfc/membersGateway.cfc"
+			],
+			[
+				"memberdao",
+				"cfc/membersDAO.cfc"
+			],
+			[
+				"downloaddocandphoto",
+				"include/downloaddocandphoto.cfm"
+			],
+			[
+				"viewpplo",
+				"ami/Client/viewPPLog.cfm"
+			],
+			[
+				"cfvirtualwindow",
+				"js/cfvirtualwindow.js"
+			],
+			[
+				"ppsumma",
+				"ami/propertySummaryInclude/PPSummary.cfm"
+			],
+			[
+				"propertysumm",
+				"ami/propertySummaryInclude/PropertySummary.cfm"
+			],
+			[
+				"view_clientordernew.cfm",
+				"client/view_clientordernew.cfm"
+			],
+			[
+				"vender",
+				"contractor/vendor_header.cfm"
+			],
+			[
+				"contractor_head",
+				"contractor/includes/contractor_head.cfm"
+			],
+			[
+				"esap",
+				"test/esapi.cfm"
+			],
+			[
+				"pcr_sho",
+				"createform/PCR_short.cfm"
+			],
+			[
+				"createdocument",
+				"cfc/createDocument.cfc"
+			],
+			[
+				"contractor_communication",
+				"ami/propertySummaryInclude/Contractor_Communication.cfm"
+			],
+			[
+				"jobnote",
+				"ami/js/jobNote.js"
+			],
+			[
+				"midnight",
+				"Schedule/midNightTrashOrder.cfm"
+			],
+			[
+				"midni",
+				"Schedule/midNightInfoNeeded.cfm"
+			],
+			[
+				"wint",
+				"liveBulkScripts/wintorderjob.cfm"
+			],
+			[
+				"contractor_jobs",
+				"cfc/contractor_jobs2Gateway.cfc"
+			],
+			[
+				"excel_propertygateway",
+				"cfc/excel_PropertyGateway.cfc"
+			],
+			[
+				"property_export",
+				"client/property_export.cfm"
+			],
+			[
+				"property.cfm",
+				"client/property.cfm"
+			],
+			[
+				"invoicegateway",
+				"cfc/invoiceGateway.cfc"
+			],
+			[
+				"jobservice",
+				"ami/reports/jobServices_report_exporteoexcel.cfm"
+			],
+			[
+				"client_property.js",
+				"ami/Client/js/client_property.js"
+			],
+			[
+				"client_property.cfm",
+				"ami/Client/client_property.cfm"
+			],
+			[
+				"excel_propertymetagateway",
+				"cfc/excel_propertymetaGateway.cfc"
+			],
+			[
+				"client_propertymeta",
+				"ami/Client/client_propertyMeta.cfm"
+			],
+			[
+				"propertyinfo",
+				"ami/propertyinfo.cfm"
+			],
+			[
+				"meta",
+				"ami/Client/metaHistory.cfm"
+			],
+			[
+				"excelpropertyg",
+				"cfc/excel_PropertyGateway.cfc"
+			],
+			[
+				"exportproper",
+				"ami/Client/exportPropertyToExcel.cfm"
+			],
+			[
+				"requestqueu",
+				"Schedule/requestqueue_bid.cfm"
+			],
+			[
+				"requestque",
+				"Schedule/requestqueue.cfm"
+			],
+			[
+				"manualme",
+				"liveBulkScripts/manualmemberemailscheduler.cfm"
+			],
+			[
+				"bidstore",
+				"ami/Client/bidstoreview.cfm"
+			],
+			[
+				"updaterep",
+				"Schedule/updatereport.cfm"
+			],
+			[
+				"app",
+				"applicationProxy.cfc"
+			],
+			[
+				"requestq",
+				"Schedule/requestqueue_bid.cfm"
+			],
+			[
+				"applica",
+				"applicationProxy.cfc"
+			],
+			[
+				"requesq",
+				"Schedule/requestqueue_document.cfm"
+			],
+			[
+				"documentsgateway",
+				"cfc/documentsGateway.cfc"
+			],
+			[
+				"job_docum",
+				"ami/job_document_action.cfm"
+			],
+			[
+				"request",
+				"Schedule/requestqueue_bid.cfm"
+			],
+			[
+				"memberemailsce",
+				"Schedule/memberemailscheduler.cfm"
+			],
+			[
+				"bidsg",
+				"cfc/bidsGateway_part1.cfm"
+			],
+			[
+				"bidsgate",
+				"cfc/bidsGateway.cfc"
+			],
+			[
+				"document.j",
+				"ami/js/document.js"
+			],
+			[
+				"documetsumm",
+				"ami/propertySummaryInclude/documentsummary.cfm"
+			],
+			[
+				"bidstorev",
+				"ami/Client/bidstoreview.cfm"
+			],
+			[
+				"transferjob",
+				"ami/transferjob.cfm"
+			],
+			[
+				"documentstypegateway",
+				"cfc/documentstypeGateway.cfc"
+			],
+			[
+				"documentstypesettinggateway",
+				"cfc/documentsTypeSettingGateway.cfc"
+			],
+			[
+				"documents.cf",
+				"contractor/mob/documents.cfm"
+			],
+			[
+				"resendwor",
+				"liveBulkScripts/resendworkorder.cfm"
+			],
+			[
+				"resendwo",
+				"ami/reSendworkOrderInstruction.cfm"
+			],
+			[
+				"photo.js",
+				"ami/js/Photo.js"
+			],
+			[
+				"job_document_action",
+				"ami/job_document_action.cfm"
+			],
+			[
+				"documentsloggateway",
+				"cfc/DocumentsLogGateway.cfc"
+			],
+			[
+				"document.js",
+				"ami/js/document.js"
+			],
+			[
+				"documentsumar",
+				"ami/propertySummaryInclude/documentsummary.cfm"
+			],
+			[
+				"documentlog",
+				"ami/documentLog.cfm"
+			],
+			[
+				"rtdeliverable",
+				"ami/propertySummaryInclude/RTdeliverable.cfm"
+			],
+			[
+				"updatesgateway",
+				"cfc/updatesGateway.cfc"
+			],
+			[
+				"invoice_2gateway",
+				"cfc/invoice_2Gateway.cfc"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/DATA/workspace/ticketsystem/project.sublime-project"
+			],
+			[
+				"tig",
+				"//cf9/Projects/InsightGroup/www/project.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 287.0,
+	"status_bar_visible": true
+}
