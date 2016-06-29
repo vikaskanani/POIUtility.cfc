@@ -73,7 +73,7 @@
 			
 		</cfif>
 	
-	
+		<cfset VARIABLES.jarPath="#directoryList(getDirectoryFromPath(getCurrentTemplatePath()) & 'lib/', true, 'path', '*.jar').toList()#" />
 		<!--- 
 			Create the Excel workbook to which we will be writing. Check 
 			to see if we are creating a totally new workbook, or if we want 
@@ -83,13 +83,13 @@
 		
 			<!--- Read in existing workbook. --->
 			<cfif ATTRIBUTES.useXmlFormat>
-				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init(
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook",variables.jarPath ).Init(
 					CreateObject( "java", "java.io.FileInputStream" ).Init(
 						JavaCast( "string", ATTRIBUTES.Template )
 						)
 					) />
 			<cfelse>
-				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook" ).Init(
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook",variables.jarPath ).Init(
 					CreateObject( "java", "java.io.FileInputStream" ).Init(
 						JavaCast( "string", ATTRIBUTES.Template )
 						)
@@ -100,9 +100,9 @@
 			
 			<!--- Create a new workbook. --->
 			<cfif ATTRIBUTES.useXmlFormat>
-				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook" ).Init() />
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.xssf.usermodel.XSSFWorkbook",variables.jarPath ).Init() />
 			<cfelse>
-				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook" ).Init() />
+				<cfset VARIABLES.WorkBook = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFWorkbook",variables.jarPath ).Init() />
 			</cfif>
 			
 		</cfif>
@@ -114,7 +114,8 @@
 		<!--- 
 			I am still using hssf class here because xssf has lots of changes that I have not checked.
 		--->
-		<cfset VARIABLES.DataFormat = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFDataFormat" ) />
+		<cfset VARIABLES.DataFormat = CreateObject( "java", "org.apache.poi.hssf.usermodel.HSSFDataFormat",variables.jarPath ) />
+		<cfset VARIABLES.useXmlFormat = ATTRIBUTES.useXmlFormat />
 	
 		<!--- Create an index of available number formats. --->
 		<cfset VARIABLES.NumberFormats = {} />

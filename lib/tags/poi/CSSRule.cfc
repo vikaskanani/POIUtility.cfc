@@ -210,13 +210,7 @@
 			required="true"
 			hint="CSS properties for to be added to the given map (may have multiple properties separated by semi-colons)."
 			/>
-		
-		<cfargument
-			name="useXmlFormat"
-			type="any"
-			required="true"
-			/>
-
+			
 		<!--- Set up local scope. --->
 		<cfset var LOCAL = {} />
 		
@@ -401,11 +395,18 @@
 			required="true"
 			hint="The XSSFCellStyle instance to which we are applying the CSS property rules."
 			/>
+
+		<cfargument
+			name="useXmlFormat"
+			type="any"
+			required="true"
+			/>
 		
 		<!--- Define the local scope. --->
 		<cfset var LOCAL = {} />
 		
-		<cfset LOCAL.colorEnum = CreateObject("java", "org.apache.poi.ss.usermodel.IndexedColors") />
+		<cfset VARIABLES.jarPaths = "#directoryList(getDirectoryFromPath(getCurrentTemplatePath()) & 'lib/', true, 'path', '*.jar').toList()#" />
+		<cfset LOCAL.colorEnum = CreateObject("java", "org.apache.poi.ss.usermodel.IndexedColors", variables.jarPaths) />
 
 		<!--- Create a local copy of the full CSS definition. --->
 		<cfset LOCAL.PropertyMap = StructCopy( VARIABLES.CSS ) />
@@ -448,7 +449,8 @@
 				<cfset ARGUMENTS.CellStyle.SetFillForegroundColor(
 					CreateObject(
 						"java",
-						"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'background-color' ] )#"
+						"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'background-color' ] )#",
+						variables.jarPaths
 						).GetIndex()
 					) />
 			</cfif>
@@ -568,7 +570,8 @@
 					<cfelse>
 						<cfset LOCAL.BorderColor = CreateObject(
 							"java",
-							"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'border-#LOCAL.BorderSide#-color' ] )#"
+							"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'border-#LOCAL.BorderSide#-color' ] )#",
+							variables.jarPaths
 							).GetIndex() />
 					</cfif>
 				
@@ -585,7 +588,8 @@
 					<cfelse>
 						<cfset LOCAL.BorderColor = CreateObject(
 							"java",
-							"org.apache.poi.hssf.util.HSSFColor$BLACK"
+							"org.apache.poi.hssf.util.HSSFColor$BLACK",
+							variables.jarPaths
 							).GetIndex() />
 					</cfif>
 						
@@ -661,7 +665,8 @@
 				<cfset LOCAL.Font.SetColor(
 					CreateObject(
 						"java",
-						"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'color' ] )#"
+						"org.apache.poi.hssf.util.HSSFColor$#UCase( LOCAL.PropertyMap[ 'color' ] )#",
+						variables.jarPaths
 						).GetIndex()
 					) />
 			</cfif>

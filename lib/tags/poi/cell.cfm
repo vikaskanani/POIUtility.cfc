@@ -507,21 +507,25 @@
 		  --->
 		<cfif ATTRIBUTES.wraptext>
 			<cfset VARIABLES.Cell.getCellStyle().setwraptext(true) />
+		</cfif>	
+		<cfif val(ATTRIBUTES.linecount) GT 0>
 			<cfset Variables.Cell.setCellValue(replaceNoCase(VARIABLES.Cell.getRichStringCellValue().getString(),"\n","#chr(10)#","all")) />
-			<cfif val(ATTRIBUTES.linecount) GT 0>
-				<cfset VARIABLES.ROWTAG.ROW.setHeightInPoints((ATTRIBUTES.linecount+1)*VARIABLES.SHEETTAG.SHEET.getDefaultRowHeightInPoints()) />
-				<cfset VARIABLES.SHEETTAG.sheet.autoSizeColumn(2) />				
-			</cfif>			
 		</cfif>
+		<!--- <cfif val(ATTRIBUTES.linecount) GT 0>
+			<cfset VARIABLES.ROWTAG.ROW.setHeightInPoints((ATTRIBUTES.linecount+1)*VARIABLES.SHEETTAG.SHEET.getDefaultRowHeightInPoints()) />
+			<cfset VARIABLES.SHEETTAG.sheet.autoSizeColumn(2) />				
+		</cfif>			 --->
+		
 
 		<!---
 			Set Hyper Link To cell
 		 --->
 		<cfif len(trim(Attributes.hyperlink)) and isValid('url', trim(Attributes.hyperlink))>
+			<cfset VARIABLES.jarPaths = "#directoryList(getDirectoryFromPath(getCurrentTemplatePath()) & 'lib/', true, 'path', '*.jar').toList()#" />
 			<cfif VARIABLES.DocumentTag.useXmlFormat>
-				<cfset variables.hyperlinks = createObject("java","org.apache.poi.ss.usermodel.Hyperlink") />
+				<cfset variables.hyperlinks = createObject("java","org.apache.poi.ss.usermodel.Hyperlink", variables.jarPaths) />
 			<cfelse>
-				<cfset variables.hyperlinks = createObject("java","org.apache.poi.hssf.usermodel.HSSFHyperlink") />
+				<cfset variables.hyperlinks = createObject("java","org.apache.poi.hssf.usermodel.HSSFHyperlink", variables.jarPaths) />
 			</cfif>
 			<cfset variables.wb = VARIABLES.DocumentTag.WORKBOOK />
 			<cfset variables.helper = variables.wb.getCreationHelper() />
@@ -532,10 +536,10 @@
 		
 		<!--- Check to see if we have more than one colspan on this cell. --->
 		<cfif (ATTRIBUTES.ColSpan GT 1)>
-			
+			<cfset VARIABLES.jarPaths = "#directoryList(getDirectoryFromPath(getCurrentTemplatePath()) & 'lib/', true, 'path', '*.jar').toList()#" />
 			<cfif VARIABLES.DocumentTag.useXmlFormat>
 				<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
-					CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress" ).Init(
+					CreateObject( "java", "org.apache.poi.ss.util.CellRangeAddress",variables.jarPaths ).Init(
 						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
 						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
 						JavaCast( "int", (ATTRIBUTES.Index - 1) ),
@@ -545,7 +549,7 @@
 					
 			<cfelse>
 				<cfset VARIABLES.SheetTag.Sheet.AddMergedRegion(
-					CreateObject( "java", "org.apache.poi.hssf.util.Region" ).Init(
+					CreateObject( "java", "org.apache.poi.hssf.util.Region",variables.jarPaths ).Init(
 						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
 						JavaCast( "short", (ATTRIBUTES.Index - 1) ),
 						JavaCast( "int", (VARIABLES.SheetTag.RowIndex - 1) ),
@@ -555,6 +559,7 @@
 			</cfif>
 		
 		</cfif>
+		
 		
 		<!--- Update the cell count. --->
 		<cfset VARIABLES.RowTag.CellIndex += ATTRIBUTES.ColSpan />
